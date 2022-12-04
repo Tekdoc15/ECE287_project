@@ -1,4 +1,4 @@
-module S7 (in,out)
+module S7 (in,out);
 input [5:0]in;
 output reg [3:0]out;
 
