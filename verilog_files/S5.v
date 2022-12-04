@@ -1,4 +1,4 @@
-module S5 (in,out)
+module S5 (in,out);
 input [5:0]in;
 output reg [3:0]out;
 
