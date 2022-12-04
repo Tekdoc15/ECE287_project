@@ -1,4 +1,4 @@
-module S8 (in,out)
+module S8 (in,out);
 input [5:0]in;
 output reg [3:0]out;
 
