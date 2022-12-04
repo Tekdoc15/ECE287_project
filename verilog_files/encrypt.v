@@ -1,6 +1,4 @@
 module encrypt (
-input clk,
-input rst,
 input [63:0]message,
 input [63:0]key,
 output [63:0]encryptmessage

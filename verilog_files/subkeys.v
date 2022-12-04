@@ -1,6 +1,4 @@
-module subkeyshift(clk,rst,subkey,sub1,sub2,sub3,sub4,sub5,sub6,sub7,sub8,sub9,sub10,sub11,sub12,sub13,sub14,sub15,sub16)
-
-input clk,rst;
+module subkeyshift(subkey,sub1,sub2,sub3,sub4,sub5,sub6,sub7,sub8,sub9,sub10,sub11,sub12,sub13,sub14,sub15,sub16);
 
 input [55:0] subkey;
 output reg [55:0] sub1;
@@ -20,7 +18,7 @@ output reg [55:0] sub14;
 output reg [55:0] sub15;
 output reg [55:0] sub16;
 
-always @ (posedge clk or negedge rst)
+always @ (*)
 	begin
 		sub1 = {subkey[2],subkey[3],subkey[4],subkey[5],subkey[6],subkey[7],subkey[8],subkey[9],subkey[10],subkey[11],subkey[12],subkey[13],subkey[14],subkey[15],subkey[16],subkey[17],subkey[18],subkey[19],subkey[20],subkey[21],subkey[22],subkey[23],subkey[24],subkey[25],subkey[26],subkey[27],subkey[28],subkey[1],subkey[30],subkey[31],subkey[32],subkey[33],subkey[34],subkey[35],subkey[36],subkey[37],subkey[38],subkey[39],subkey[40],subkey[41],subkey[42],subkey[43],subkey[44],subkey[45],subkey[46],subkey[47],subkey[48],subkey[49],subkey[50],subkey[51],subkey[52],subkey[53],subkey[54],subkey[55],subkey[56],subkey[29]};
 		sub2 = {subkey[3],subkey[4],subkey[5],subkey[6],subkey[7],subkey[8],subkey[9],subkey[10],subkey[11],subkey[12],subkey[13],subkey[14],subkey[15],subkey[16],subkey[17],subkey[18],subkey[19],subkey[20],subkey[21],subkey[22],subkey[23],subkey[24],subkey[25],subkey[26],subkey[27],subkey[28],subkey[1],subkey[2],subkey[31],subkey[32],subkey[33],subkey[34],subkey[35],subkey[36],subkey[37],subkey[38],subkey[39],subkey[40],subkey[41],subkey[42],subkey[43],subkey[44],subkey[45],subkey[46],subkey[47],subkey[48],subkey[49],subkey[50],subkey[51],subkey[52],subkey[53],subkey[54],subkey[55],subkey[56],subkey[29],subkey[30]};

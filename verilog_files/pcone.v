@@ -1,11 +1,9 @@
-module pcone(clk,rst,key,subkey);
-
-input clk,rst;
+module pcone(key,subkey);
 
 input [63:0] key;
 output reg [55:0] subkey;
 
-always @ (posedge clk or negedge rst)
+always @ (*)
 	begin
 	// concantenate the bits of the key into a sub key following this pattern:
 	// |
