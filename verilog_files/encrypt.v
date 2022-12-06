@@ -39,7 +39,11 @@ wire [47:0]pc2subkey14;
 wire [47:0]pc2subkey15;
 wire [47:0]pc2subkey16;
 
-reg [63:0]tempmessage;
+wire [63:0] message_ip;
+
+// Instantiate dataip bit swap
+dataip dataip_inst(message,message_ip);
+
 
 //instantiate pc-1 algorithm and generate first subkey
 pcone pcuno(clk,rst,key,subkeyprime);
@@ -65,21 +69,6 @@ pctwo generate14(clk,rst,subkey14,pc2subkey14);
 pctwo generate15(clk,rst,subkey15,pc2subkey15);
 pctwo generate16(clk,rst,subkey16,pc2subkey16);
 
-// rearrange message data per message IP block diagram
-// |
-// | 58 | 50 | 42 | 34 | 26 | 18 | 10 | 2 |
-// | 60 | 52 | 44 | 36 | 28 | 20 | 12 | 4 |
-// | 62 | 54 | 46 | 38 | 30 | 22 | 14 | 6 |
-// | 64 | 56 | 48 | 40 | 32 | 24 | 16 | 8 |
-// | 57 | 49 | 41 | 33 | 25 | 17 | 9  | 1 |
-// | 59 | 51 | 43 | 35 | 27 | 19 | 11 | 3 |
-// | 61 | 53 | 45 | 37 | 29 | 21 | 13 | 5 |
-// | 63 | 55 | 47 | 39 | 31 | 23 | 15 | 7 |
-
-always @(*)
-	begin
-		tempmessage = {message[58],message[50],message[42],message[34],message[26],message[18],message[10],message[2],message[60],message[52],message[44],message[36],message[28],message[12],message[4],message[62],message[54],message[46],message[38],message[30],message[22],message[14],message[6],message[64],message[56],message[48],message[40],message[32],message[24],message[16],message[8],message[57],message[49],message[41],message[33],message[25],message[17],message[9],message[1],message[59],message[51],message[43],message[35],message[27],message[19],message[11],message[3],message[61],message[53],message[45],message[37],message[29],message[21],message[13],message[5],message[63],message[55],message[47],message[39],message[31],message[23],message[15],message[7]};
-	end
 
 
 
