@@ -1,0 +1,36 @@
+module desproject (
+clk,
+rst
+output [6:0]seg7_dig0,
+output [6:0]seg7_dig1,
+output [6:0]seg7_dig2,
+output [6:0]seg7_dig3,
+output [6:0]seg7_dig4,
+output [6:0]seg7_dig5,
+output [6:0]seg7_dig6,
+output [6:0]seg7_dig7,
+);
+
+input clk,rst;
+
+wire digit0 = 4'hf;
+wire digit1 = 4'hf;
+wire digit2 = 4'hf;
+wire digit3 = 4'hf;
+wire digit4 = 4'hf;
+wire digit5 = 4'hf;
+wire digit6 = 4'hf;
+wire digit7 = 4'hf;
+
+// Instansiate seven segment displays
+
+sevenseg seg7_0(digit0,seg7_dig0);
+sevenseg seg7_1(digit1,seg7_dig1);
+sevenseg seg7_2(digit2,seg7_dig2);
+sevenseg seg7_3(digit3,seg7_dig3);
+sevenseg seg7_4(digit4,seg7_dig4);
+sevenseg seg7_5(digit5,seg7_dig5);
+sevenseg seg7_6(digit6,seg7_dig6);
+sevenseg seg7_7(digit7,seg7_dig7);
+
+endmodule

@@ -1,6 +1,6 @@
 module pctwo(subkey,pc2subkey);
 
-input [55:0] subkey;
+input [56:1] subkey;
 output reg [47:0] pc2subkey;
 
 always @ (*)
