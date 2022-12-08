@@ -5,4 +5,4 @@ The project is being documented in the wiki for the repository.
 
 We will be storing the verilog files needed to compile the project for a DE2-115 here.
 
-Project Demo
+[Project Demo](https://youtu.be/MuJubp8wAwM)
