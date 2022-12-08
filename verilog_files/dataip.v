@@ -1,6 +1,6 @@
 module dataip(data,dataip);
 
-input [63:0] data;
+input [64:1] data;
 output reg [63:0] dataip;
 
 always @ (*)
