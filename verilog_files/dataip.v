@@ -1,7 +1,7 @@
 module dataip(data,dataip);
 
 input [63:0] data;
-output [63:0] dataip;
+output reg [63:0] dataip;
 
 always @ (*)
 	begin
